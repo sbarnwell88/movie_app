@@ -1,1 +1,12 @@
 <h1>Films</h1>
+
+<% @films.each do |film| %>
+<ul>
+    <li><%= film.title %></li>
+    <li><%= film.year %></li>
+    <li><%= film.genre %></li>
+    <li><%= film.synopsis %></li>
+    <%= image_tag film.picture %>
+</ul>
+
+<% end %>
