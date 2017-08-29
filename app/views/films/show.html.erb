@@ -4,4 +4,4 @@
 <h4><%= @film.synopsis %></h4>
 <h4><%= image_tag @film.picture %></h4>
 
-<%= button_to 'Add to Favorites', {:controller => "favorites", :action => "create", :film_id => @film.id, :user_id => current_user.id} , :method=>:post  %>
+<%= button_to 'add to favorites', favorites_path(:film_id => @film.id), method: :post  %>
