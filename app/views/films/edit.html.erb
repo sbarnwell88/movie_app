@@ -1,0 +1,7 @@
+<h1>Edit Movie</h1>
+
+<%= render "partials/form"%>
+
+<%= form_for @film, method: :delete do |f| %>
+    <%= f.submit "Delete", class: "delete" %>
+<% end %>
