@@ -13,6 +13,10 @@ class FilmsController < ApplicationController
         redirect_to films_path(@film)
     end
 
+    def show
+        @film = Film.find(params[:id])
+    end 
+
       private
     def film_params
         params.require(:film).permit(:title, :genre, :year, :synopsis, :picture)
